@@ -17,18 +17,23 @@ class App  extends Component {
       selectedVideo: null
     };
 
+    this.videoSearch('super smash bros');
+  }
+
+  videoSearch(term) {
     // Grab start videos from youtube
-    YTSearch({key: API_KEY, term: 'super smash bros'}, videos => {
+    YTSearch({key: API_KEY, term: term}, videos => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
       });
     });
   }
+
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
