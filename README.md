@@ -1,25 +1,28 @@
-# ReduxSimpleStarter
-
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+# Youtube Search Tool using React
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
+After cloning the repo you must add a file in the root of the directory call apiKeys.js and have its contents be the following:
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
+module.exports = {
+  YoutubeKey: "your-youtube-api-key-here"
+}
+```
+Replacing the contents of "your-youtube-api-key-here" with whatever your youtube api key is.
+
+After that run a simple
+```
+npm install
+```
+In order to download all the needed packages for this project
+
+
+### Viewing Project
+
+Run the following command
+```
+npm start
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+This will run up a quick webpack server.
+Open your favorite web browser and go to the url http://localhost:8080
