@@ -6,7 +6,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 // Youtube API Key
-const API_KEY = '***REMOVED***';
+import ApiKeys, { YoutubeKey } from '../apiKeys'
 
 // Create a new component. This component should produce some html
 class App  extends Component {
@@ -23,7 +23,7 @@ class App  extends Component {
 
   videoSearch(term) {
     // Grab start videos from youtube
-    YTSearch({key: API_KEY, term: term}, videos => {
+    YTSearch({key: YoutubeKey, term: term}, videos => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
