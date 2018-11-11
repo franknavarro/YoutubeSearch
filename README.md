@@ -10,16 +10,18 @@ module.exports = {
 ```
 Replacing the contents of "your-youtube-api-key-here" with whatever your youtube api key is.
 
-After that run a simple
+After that run the following command in the terminal
 ```
 npm install
 ```
 In order to download all the needed packages for this project
 
 
+
+
 ### Viewing Project
 
-Run the following command
+Run the following command in the terminal
 ```
 npm start
 ```
